@@ -1,0 +1,324 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: #fff;
+}
+body{
+    background-color: #121212;
+}
+
+#Header{
+    height: 700px;
+}
+
+/* header Section */
+.navbar{
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    margin: 1.25rem;
+}
+
+ul{
+    display: inline-flex;
+    list-style-type: none;
+}
+li{
+    margin: 1rem 2rem;
+    
+}
+a{
+    font-family: 'Fredoka One', cursive;
+    font-weight: bold;
+    text-decoration: none;
+}
+.h3word{
+    color: #ff66c4;
+    margin-top: 10rem;
+    padding-left: 6rem;
+    font-family: 'ubuntu', sans-serif;
+    font-size: 2.375rem;
+    font-weight: 600;
+    text-shadow: #ff66cf 0 0 0.325rem;
+    animation-name: scale-up-ver-top;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+.h1word{
+    color: #fff;
+    width: auto;
+    height: auto;
+    font-family: 'Rubik Marker Hatch', cursive;
+    font-size: 8.375rem;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    text-shadow: #868686 0 0.938rem 0.625rem;
+    animation-name: scale-up-ver-top;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+.h3aword{
+    color: #ff66c4;
+    padding-left: 11.75rem;
+    font-family: 'ubuntu', sans-serif;
+    font-size: 2.375rem;
+    font-weight: 600;
+    text-shadow: #ff66cf 0 0 0.625rem;
+    animation-name: scale-up-ver-top;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+.h1aword{
+    display: flex;
+    justify-content: center;
+    font-family: 'ubuntu', sans-serif;
+    font-size: 2.375rem;
+    text-shadow: #868686 0 0.188rem 0.625rem;
+    animation-name: scale-up-ver-top;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    
+}
+.portword{
+    text-shadow: #38b6ff 0 0 0.625rem;
+    margin-left: 1rem;
+    font-family: 'ubuntu', sans-serif;
+    font-weight: bold;
+    animation-name: scale-up-ver-top;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+/* navbar button */
+.glow-on-hover {
+    width: 120px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+
+/* text animation */
+@keyframes scale-up-ver-top {
+    0%{
+      transform: scaleX(0);
+      transform-origin: 100% 0%;
+    }
+    100%{
+      transform: scaleX(1);
+      transform-origin: 100% 0%;
+    }
+  }
+
+/* about section */
+#about{
+    color: #fff;
+    height: 700px;
+}
+/* .aboutme{
+    
+} */
+
+.container {
+    color: var(--color);
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 6rem 2rem;
+    font-size: 2.625rem;
+    font-family: 'Fredoka One', cursive;
+    font-weight: 600;
+  }
+  
+  .right {
+    text-align: right;
+    width: 100%;
+  }
+  
+  .stack {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  
+  .stack span {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    --stack-height: calc(100% / var(--stacks) - 1px);
+    --inverse-index: calc(calc(var(--stacks) - 1) - var(--index));
+    --clip-top: calc(var(--stack-height) * var(--index));
+    --clip-bottom: calc(var(--stack-height) * var(--inverse-index));
+    clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
+    animation: stack 340ms cubic-bezier(.46,.29,0,1.24) 1 backwards calc(var(--index) * 120ms), glitch 1s ease infinite 1s alternate-reverse;
+  }
+  
+  .stack span:nth-child(odd) { --glitch-translate: 8px; }
+  .stack span:nth-child(even) { --glitch-translate: -8px; }
+  
+  @keyframes stack {
+    0% {
+      opacity: 0;
+      transform: translateX(-50%);
+      text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+    };
+    60% {
+      opacity: 0.5;
+      transform: translateX(50%);
+    }
+    80% {
+      transform: none;
+      opacity: 1;
+      text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+    }
+    100% {
+      text-shadow: none;
+    }
+  }
+  
+  @keyframes glitch {
+    0% {
+      text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+      transform: translate(var(--glitch-translate));
+    }
+    2% {
+      text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+    }
+    4%, 100% {  text-shadow: none; transform: none; }
+  }
+  .white{
+    width: auto;
+    height: 500px;
+    text-align: left;
+    margin:0 10rem;
+  }
+  .amanimg{
+    height: 500px;
+    border-radius: 0.8rem 0 0 0.8rem;
+    float: right;
+  }
+  .word{
+    padding: 8rem 0;
+    margin: 0 10rem;
+    line-height: 2rem;
+  }
+  .word1{
+    font-family: 'poppins', sans-serif;
+    font-size: 1.625rem;
+    font-weight: bolder;
+  }
+  .word2{
+    font-family: 'poppins', sans-serif;
+    font-size: 3.625rem;
+    font-weight: bolder;
+    color: #fff;
+    text-shadow: #38b6ff 0 0 0.625rem;
+  }
+  .word3{
+    font-family: 'poppins', sans-serif;
+    font-size: 3.625rem;
+    font-weight: bolder;
+    color: #fff;
+    text-shadow: #ffbc3e 0 0 0.625rem;
+  }
+  .word4{
+    font-family: 'poppins', sans-serif;
+    font-size: 1.625rem;
+    font-weight: bolder;
+    color: #fff;
+    font-family: monospace;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+  }
+  /* The typing effect */
+/* @keyframes typing {
+    from { width: 100% }
+    to { width: 0 }
+  }
+  
+  /* The typewriter cursor effect */
+ /* @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+  } */
